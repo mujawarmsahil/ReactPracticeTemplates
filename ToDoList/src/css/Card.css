@@ -1,8 +1,6 @@
 .card{
-    position: absolute;
-    top: 25%;
-    left: 40%; 
-    translate: translate(-50%, -50%);
+    align-self: center;
+    position: relative;
     width: 320px;
     min-height: 50px;
     padding: 20px;
@@ -12,6 +10,23 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    box-shadow: 0 0 10px 1px #da923f7e;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    z-index: -41;
+    left: -30px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #ee33f193;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .inputContainer
@@ -67,9 +82,10 @@ ul{
 
 li{
     display: flex;
+    overflow-x: scroll;
     justify-content: space-between;
     margin-top: 10px;
-    padding: 10px;
+    padding: 20px;
     color: #fff;
     box-shadow: 0 0 10px 1px #000000 inset;
     border-top-left-radius: 20px;
@@ -96,4 +112,13 @@ li:hover{
     /* border-radius: 50%; */
     cursor: pointer;
     background-color: transparent;
+}
+
+@media only screen and (max-width:500px)
+{
+    .card{
+        width: 90vw;
+        top:0;
+        left: 0;
+}
 }

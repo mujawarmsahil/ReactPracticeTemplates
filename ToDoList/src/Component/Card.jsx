@@ -31,6 +31,8 @@ export default class Card extends React.Component {
 
     render(){
         return <>
+        
+            <section className="bubble"></section>
             <div className="card">
                 <section className="inputContainer">
                     <input type="text" name="lists" value={this.state.name} onChange={(e) => {this.addName(e)}} id="ToDoContainer" />
